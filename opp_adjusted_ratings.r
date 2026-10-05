@@ -80,7 +80,7 @@ game_epa <- pbp %>%
     home_field = ifelse(first(pos_team) == first(home_team), 1, 0), 
     .groups = "drop"
   )
-install.packages("lfe")
+#install.packages("lfe")
 library(lfe)
 head(game_epa)
 fit <- felm(epa ~ home_field | pos_team + def_pos_team, data = game_epa)
